@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/neryad/.dotnet/store/|arch|/|tfm|",
+      "/Users/neryad/.nuget/packages"
+    ]
+  }
+}
