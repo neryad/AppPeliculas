@@ -1,0 +1,26 @@
+<app-listado-genrico [listado]="peliculas">
+  <ng-container vacio>
+    <div>Mesaje perzonalizado</div>
+  </ng-container>
+  <ng-container contedino>
+    <div
+      class="pelicula-contenedor"
+      *ngFor="let pelicula of peliculas; let index = index"
+    >
+      <div>
+        Pelcula : {{ index }} {{ pelicula.titulo | uppercase }}
+        <button (click)="remover(index)" style="margin-left: 1rem">
+          Remover
+        </button>
+      </div>
+
+      <div>
+        {{ pelicula.fechaLanzamineto | date: "dd-MMMM-yyyy" | uppercase }}
+      </div>
+
+      <div>
+        {{ pelicula.precio | currency }}
+      </div>
+    </div>
+  </ng-container>
+</app-listado-genrico>
