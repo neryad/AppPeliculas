@@ -1,0 +1,19 @@
+<app-listado-genrico [listado]="peliculas">
+  <ng-container contedino>
+    <div class="peliculas-contenedor">
+      <div
+        class="pelicula-contenedor"
+        *ngFor="let pelicula of peliculas; let index = index"
+      >
+        <a>
+          <img [src]="pelicula.poster" alt="Poster" />
+        </a>
+        <p>{{ pelicula.titulo }}</p>
+        <div>
+          <a mat-flat-button color="primary">Editar</a>
+          <button mat-flat-button color="warn" type="button">Borrar</button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</app-listado-genrico>
